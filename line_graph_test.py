@@ -17,7 +17,7 @@ for i in range(len(x_all) - 1):
     x_line = [x_all[i], x_all[i + 1]]
     y_line = [y_all[i], y_all[i]]
     p.plot(x_line, y_line, color="blue")
-# бесконечные линии влево и вправо
+# бесконечные линии влево и вправо (всё равно придется фотошопить)
 p.plot([6, 7.5], [0, 0], color="blue")
 p.plot([22.5, 23], [0.9, 0.9], color="blue")
 # легенда
