@@ -22,8 +22,9 @@ plt.title("Выборочная функция распределения для
 plt.ylabel("F(x)")
 plt.xlabel("x")
 # сетка
-p.xaxis.set_major_locator(FixedLocator(x_all))
-p.yaxis.set_major_locator(FixedLocator([0] + y_all))
+x_all_unique, y_all_unique = list(set(x_all)), list(set([0] + y_all))  # добавила 0 для оси Ox
+p.xaxis.set_major_locator(FixedLocator(x_all_unique))
+p.yaxis.set_major_locator(FixedLocator(y_all_unique))
 p.grid()
 # вывод
 plt.show()
