@@ -1,4 +1,4 @@
-# Выборочная функция распределения для СВ Y
+# Выборочная функция распределения для Y
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FixedLocator
 # набор данных
@@ -18,8 +18,9 @@ for i in range(len(x_all) - 1):
 p.plot([x_all[0] - 2, x_all[0]], [0, 0], color="red")
 p.plot([x_all[-1], x_all[-1] + 2], [y_all[-1], y_all[-1]], color="red")
 # легенда
-plt.ylabel("F(Y)")
-plt.xlabel("Y")
+plt.title("Выборочная функция распределения для Y")
+plt.ylabel("F(y)")
+plt.xlabel("y")
 # сетка
 p.xaxis.set_major_locator(FixedLocator(x_all))
 p.yaxis.set_major_locator(FixedLocator([0] + y_all))
