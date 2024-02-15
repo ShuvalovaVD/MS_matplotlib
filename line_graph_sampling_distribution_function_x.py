@@ -1,4 +1,4 @@
-# Выборочная функция распределения для СВ X
+# Выборочная функция распределения для X
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FixedLocator
 # набор данных
