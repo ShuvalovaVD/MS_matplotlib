@@ -1,4 +1,4 @@
-# Гистограмма частот для СВ X
+# Гистограмма частот для X
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FixedLocator
 # набор данных
@@ -10,7 +10,7 @@ p = fig.add_subplot()
 # столбчатая диаграмма
 p.bar(x_all, y_all, width=1.97, align="edge", color="orange", linewidth=1.0, edgecolor="black")  # указываем ширину
 # легенда
-plt.title("Гистограмма частот для СВ X")
+plt.title("Гистограмма частот для X")
 plt.ylabel("n_i/(n*w)")
 plt.xlabel("x")
 # отметки
