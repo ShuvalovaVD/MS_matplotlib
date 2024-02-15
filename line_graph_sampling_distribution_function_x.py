@@ -18,8 +18,9 @@ for i in range(len(x_all) - 1):
 p.plot([x_all[0] - 2, x_all[0]], [0, 0], color="red")
 p.plot([x_all[-1], x_all[-1] + 2], [y_all[-1], y_all[-1]], color="red")
 # легенда
-plt.ylabel("F(X)")
-plt.xlabel("X")
+plt.title("Выборочная функция распределения для X")
+plt.ylabel("F(x)")
+plt.xlabel("x")
 # сетка
 p.xaxis.set_major_locator(FixedLocator(x_all))
 p.yaxis.set_major_locator(FixedLocator([0] + y_all))
