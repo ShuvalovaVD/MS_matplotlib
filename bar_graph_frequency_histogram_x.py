@@ -14,7 +14,8 @@ plt.title("Гистограмма частот для X")
 plt.ylabel("n_i/(n*w)")
 plt.xlabel("x")
 # отметки
-p.xaxis.set_major_locator(FixedLocator(x_all + [21.69]))  # добавила самое правое значение
-p.yaxis.set_major_locator(FixedLocator(y_all))
+x_all_unique, y_all_unique = list(set(x_all + [21.69])), list(set(y_all))  # добавила самое правое значение
+p.xaxis.set_major_locator(FixedLocator(x_all_unique))
+p.yaxis.set_major_locator(FixedLocator(y_all_unique))
 # вывод
 plt.show()
