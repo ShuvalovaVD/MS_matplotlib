@@ -18,9 +18,10 @@ y_all_pol = [0.04, 0.06, 0.10, 0.10, 0.05, 0.04, 0.03, 0.04, 0.03, 0.03]
 fig = plt.figure(figsize=(15, 6))
 p = fig.add_subplot()
 # гистограмма
-p.bar(x_all_hist, y_all_hist, width=width_hist, align="edge", color="orange", linewidth=1.0, edgecolor="black")
+p.bar(x_all_hist, y_all_hist, width=width_hist, align="edge", color="orange", linewidth=1.0, edgecolor="black",
+      label='гистограмма')
 # полигон
-p.plot(x_all_pol, y_all_pol, color="red", marker="o")
+p.plot(x_all_pol, y_all_pol, color="red", marker="o", label='полигон')
 
 # ПРВ нормального распределения
 step_norm = 0.001  # шаг
@@ -28,12 +29,13 @@ x_norm = np.arange(x_left_hist, x_right_hist, step_norm)
 m = 10.10  # параметр матожидания
 sd = 5.00  # параметр среднего квадратичного отклонения
 f_max = round(0.3989 / sd, 2)  # максимальное значение ф-ции, округлённое до двух знаков после точки
-p.plot(x_norm, norm.pdf(x_norm, m, sd), color="green")
+p.plot(x_norm, norm.pdf(x_norm, m, sd), color="green", label='ПРВ нормального распределения')
 
 # легенда
 plt.title("Графики для X: гистограмма, полигон, ПРВ для нормального распределения")
 plt.ylabel("n_i/(n*w)")
 plt.xlabel("x")
+p.legend(loc='upper right')
 # отметки
 x_all_unique = list(set(x_all_hist + [x_right_hist] + x_all_pol))
 y_all_unique = list(set(y_all_hist + y_all_pol + [f_max]))
