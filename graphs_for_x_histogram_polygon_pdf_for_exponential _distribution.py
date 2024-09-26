@@ -1,3 +1,4 @@
+# ВАЖНО: код писала Таня, в моей РГР не было такого распределения
 # Графики для X: гистограмма, полигон, ПРВ для экспоненциального распределения
 import numpy as np
 from scipy.stats import expon
@@ -22,7 +23,6 @@ p.bar(x_all_hist, y_all_hist, width=width_hist, align="edge", color="orange", li
 # полигон
 p.plot(x_all_pol, y_all_pol, color="red", marker="o", label='полигон')
 
-# Код писала Таня
 # ПРВ экспоненциального распределения
 la = 0.0353   # лямбда
 step_exp = 0.0001
