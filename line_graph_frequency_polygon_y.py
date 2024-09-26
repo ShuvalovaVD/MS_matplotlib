@@ -17,6 +17,6 @@ plt.xlabel("y")
 x_all_unique, y_all_unique = list(set(x_all)), list(set(y_all))
 p.xaxis.set_major_locator(FixedLocator(x_all_unique))
 p.yaxis.set_major_locator(FixedLocator(y_all_unique))
-p.grid()
+p.grid()  # сетка
 # вывод
 plt.show()
