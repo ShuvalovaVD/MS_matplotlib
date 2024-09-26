@@ -1,9 +1,9 @@
-# Выборочная функция распределения для Y
+# Выборочная функция распределения для X
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FixedLocator
 # набор данных
-x_all = [6.39, 10.57, 14.75, 18.93, 23.11, 27.29, 31.47, 35.65, 39.83, 44.01]
-y_all = [0.10, 0.22, 0.37, 0.48, 0.57, 0.63, 0.75, 0.86, 0.92, 1.00]
+x_all = [2.98, 4.95, 6.92, 8.89, 10.86, 12.83, 14.80, 16.77, 18.74, 20.71]
+y_all = [0.07, 0.19, 0.39, 0.58, 0.67, 0.74, 0.80, 0.88, 0.94, 1.00]
 # создание фигуры, на к-рой будут размещаться графики (в нашем случае - один график)
 fig = plt.figure(figsize=(10, 6))
 p = fig.add_subplot()
@@ -18,9 +18,9 @@ for i in range(len(x_all) - 1):
 p.plot([x_all[0] - 2, x_all[0]], [0, 0], color="red")
 p.plot([x_all[-1], x_all[-1] + 2], [y_all[-1], y_all[-1]], color="red")
 # легенда
-plt.title("Выборочная функция распределения для Y")
-plt.ylabel("F(y)")
-plt.xlabel("y")
+plt.title("Выборочная функция распределения для X")
+plt.ylabel("F(x)")
+plt.xlabel("x")
 # отметки на осях с сеткой (нужны уникальные значения отметок, чтобы не было жирного наслоения на графике)
 x_all_unique, y_all_unique = list(set(x_all)), list(set([0] + y_all))  # ДОДЕЛАТЬ МОМЕНТ
 p.xaxis.set_major_locator(FixedLocator(x_all_unique))
