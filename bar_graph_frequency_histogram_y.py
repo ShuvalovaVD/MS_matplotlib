@@ -13,8 +13,8 @@ p.bar(x_all, y_all, width=4.18, align="edge", color="orange", linewidth=1.0, edg
 plt.title("Гистограмма частот для Y")
 plt.ylabel("n_i/(n*w)")
 plt.xlabel("y")
-# отметки
-x_all_unique, y_all_unique = list(set(x_all + [46.10])), list(set(y_all))  # добавила самое правое значение
+# отметки на осях
+x_all_unique, y_all_unique = list(set(x_all + [46.10])), list(set(y_all))  # добавила самое правое значение: 46.10
 p.xaxis.set_major_locator(FixedLocator(x_all_unique))
 p.yaxis.set_major_locator(FixedLocator(y_all_unique))
 # вывод
